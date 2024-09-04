@@ -21,7 +21,7 @@ Configure la conexión con su servidor de base de datos local en el archivo apps
 Para crear el modelo de datos por primera vez realice lo siguiente: 
 Ejecute una consola de administración de paquetes (PM) desde  [Visual Studio 2022](https://visualstudio.microsoft.com/es/vs/) y seleccione como proyecto predeterminado `PruebaSD.Infraestructure`, luego ejecute el comando:
 ```sh
-EntityFrameworkCore\Add-Migration InitialCreate -OutputDir "EntityFrameworkDataAccess/Migrations"
+Add-Migration InitialCreate -OutputDir "EntityFrameworkDataAccess/Migrations"
 ```
 Si desea usar los comandos dotnet, dirijase al directorio `PruebaSD.DataAccess` desde el explorador de archivos, desde allí ejecute una consola de comandos con lo siguiente:
 
@@ -38,7 +38,7 @@ EntityFrameworkCore\Update-Database
 
 Comando dotnet
 ```sh
-dotnet ef database update -s ../PruebaSD.WebApi/
+dotnet ef database update --project ..\[ProjectName].DataAccess --startup-project ..\[ProjectName].WebApi
 ```
 
 Verifique que la base de datos este creada y las Migraciones esten hechas, a continuación puede ejecutar la proyecto WebApi
