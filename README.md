@@ -3,7 +3,7 @@ Hola, Esta es mi prueba tecnica .Net. A continuación dejo las aplicaciones nece
 
 ## Instalación
 
-PruebaSD-api requiere [Visual Studio 2022](https://visualstudio.microsoft.com/es/vs/), [SQL Server 2019](https://www.microsoft.com/es-es/sql-server/sql-server-downloads) y [.Net Core 8.0] (https://dotnet.microsoft.com/en-us/download/dotnet/8.0) para ejecutarse.
+PruebaSD-api requiere [Visual Studio 2022](https://visualstudio.microsoft.com/es/vs/), [SQL Server 2019](https://www.microsoft.com/es-es/sql-server/sql-server-downloads) y [.Net Core 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) para ejecutarse.
 
 Abrir la solucion con [Visual Studio 2022](https://visualstudio.microsoft.com/es/vs/)
 
@@ -11,7 +11,7 @@ Configure la conexión con su servidor de base de datos local en el archivo apps
 ```sh
 {
 	"ConnectionStrings": {
-		"DefaultConnection": "server=(localdb)\\MSSQLLocalDB; database=PruebaSD; Integrated Security=True;"
+		"DefaultConnection": "server={{ SERVIDOR }}; database=PruebaSD; Integrated Security=True;"
   }
 }
 ```
